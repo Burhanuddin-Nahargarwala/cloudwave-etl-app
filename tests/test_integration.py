@@ -4,7 +4,7 @@ import subprocess
 def test_script_runs_and_creates_output():
     """Integration test to ensure the main script executes and produces a file."""
     # Define the output file path relative to the script's location
-    output_file = "/app/output/processed_users.csv"
+    output_file = "output/processed_users.csv"
 
     # If the output file exists from a previous run, remove it
     if os.path.exists(output_file):

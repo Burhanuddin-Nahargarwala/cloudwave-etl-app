@@ -29,7 +29,7 @@ transformed_df = transformed_df.drop(columns=['company'])
 
 # --- LOAD ---
 # Define the output path. We will mount a volume here in Kubernetes.
-OUTPUT_DIR = "/app/output"
+OUTPUT_DIR = "output"
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 

@@ -13,8 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application's code
 COPY etl_script.py .
 
-# Create the output directory that the script needs
-RUN mkdir -p /app/output
-
 # Define the command to run your app
 CMD ["python", "etl_script.py"]
