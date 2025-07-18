@@ -47,6 +47,7 @@ jobs:
           token: ${{ secrets.CONFIG_REPO_PAT }}
           path: 'config-repo'
 
+      # Updated the PATH
       - name: Update Kubernetes Manifest with new Image Tag
         run: |
           cd config-repo
