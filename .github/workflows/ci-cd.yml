@@ -43,7 +43,7 @@ jobs:
 
       - uses: actions/checkout@v3
         with:
-          repository: Burhan523/cloudwave-aks-config
+          repository: Burhanuddin-Nahargarwala/cloudwave-aks-config
           token: ${{ secrets.CONFIG_REPO_PAT }}
           path: 'config-repo'
 
