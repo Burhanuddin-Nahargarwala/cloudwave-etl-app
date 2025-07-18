@@ -51,7 +51,7 @@ jobs:
         run: |
           cd config-repo
           
-          DEPLOYMENT_FILE=app/cloudwave-etl/dev/deployment.yaml
+          JOB_FILE=app/cloudwave-etl/dev/job.yaml
 
           # Update the image tag in the correct file
           sed -i 's|image:.*|image: ${{ secrets.ACR_LOGIN_SERVER }}/etl-app:${{ github.sha }}|' $DEPLOYMENT_FILE
