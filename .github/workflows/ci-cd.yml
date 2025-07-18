@@ -54,11 +54,11 @@ jobs:
           JOB_FILE=app/cloudwave-etl/dev/job.yaml
 
           # Update the image tag in the correct file
-          sed -i 's|image:.*|image: ${{ secrets.ACR_LOGIN_SERVER }}/etl-app:${{ github.sha }}|' $DEPLOYMENT_FILE
+          sed -i 's|image:.*|image: ${{ secrets.ACR_LOGIN_SERVER }}/etl-app:${{ github.sha }}|' $JOB_FILE
           
           # Commit the specific, changed file
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions-bot@github.com"
-          git add $DEPLOYMENT_FILE
+          git add $JOB_FILE
           git commit -m "Update image to ${{ github.sha }} for etl-app" || echo "No changes to commit"
           git push
